@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="shortcut icon" href="./Instagram.jpeg" type="image/x-icon">
+    <style>
+        body {
+            background-color: gray;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            font-size: small;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mobile-phone {
+            height: 100%;
+            max-height: 450px;
+            width: 250px;
+            background-color: white;
+            border: 4px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: ghostwhite;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        .camera {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        main {
+            padding: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        .section-01 {
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .profile-section {
+            width: 30%;
+        }
+        .detail-section {
+            width: 70%;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .buttons button {
+            padding: 5px 15px;
+            border-radius: 5px;
+            border: 1px solid #dbdbdb;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .follow-btn {
+            background-color: #0095f6;
+            color: white;
+        }
+        .message-btn, .more-btn {
+            background-color: white;
+            color: black;
+        }
+        .profile-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px;
+            margin-top: 10px;
+        }
+        .gallery-item {
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item {
+            width: 100%;
+            height: 90px; /* Ensures all gallery items are square */
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-phone">
+        <header class="flex-center">
+            <div class="camera"></div>
+        </header>
+        <main id="instagram">
+            <section class="section-01">
+                <div class="profile-section">
+                    <img src="./image.jpeg" alt="Profile image">
+                </div>
+                <div class="detail-section">
+                    <div>
+                        <div>1</div>
+                        <div>posts</div>
+                    </div>
+                    <div>
+                        <div>122</div>
+                        <div>followers</div>
+                    </div>
+                    <div>
+                        <div>242</div>
+                        <div>following</div>
+                    </div>
+                </div>
+            </section>
+            <div class="buttons">
+                <button class="follow-btn">Follow</button>
+                <button class="message-btn">Message</button>
+                <button class="more-btn">⚙️</button>
+            </div>
+            <div class="profile-gallery">
+                <div class="gallery-item">
+                    <img src="./images/post1.jpg" alt="Post Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/post2.jpg" alt="Post Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/post3.jpg" alt="Post Image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/post4.jpg" alt="Post Image 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/post5.jpg" alt="Post Image 5">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
